@@ -1,0 +1,181 @@
+/* components/NoteView/NoteView.module.css */
+
+.noteViewContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #dae5f5;
+}
+
+/* --- Header Styling --- */
+.header {
+  background-color: #001f8b;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.displayPicture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.groupName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* --- Notes List Styling --- */
+.notesList {
+  flex-grow: 1;
+  padding: 20px 30px;
+  padding-bottom: 150px;
+  overflow-y: auto;
+}
+
+.noteItem {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.noteContent {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+.noteMeta {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+.separator {
+  margin: 0 5px;
+}
+
+/* --- Input Bar Styling --- */
+.inputBar {
+  position: absolute;
+  bottom: 0;
+  width: 93.4%;
+  background-color: #001f8b;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+.inputWrapper {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+}
+
+.input {
+  flex-grow: 1;
+  padding: 15px 60px 15px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: none;
+  height: 70px;
+  overflow-y: auto;
+  background-color: white;
+  color: black;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.input::placeholder {
+  color: #a0a0a0;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2),
+    0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.sendButton {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: not-allowed;
+  transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
+  padding: 0;
+  z-index: 10;
+}
+
+.sendButton.active {
+  cursor: pointer;
+}
+
+.sendIcon {
+  width: 24px;
+  height: 24px;
+  color: #a0a0a0;
+  transition: color 0.2s ease-in-out;
+}
+
+.sendButton.active .sendIcon {
+  color: #001f8b;
+  transform: translateX(2px);
+}
+
+.sendButton:not(:disabled):hover .sendIcon {
+  color: #fff;
+  transform: scale(1.1) translateX(2px);
+}
+
+@media (max-width: 768px) {
+  .header {
+    background-color: #16008b;
+    color: white;
+    padding: 15px 20px;
+  }
+
+  .header .groupName {
+    color: white;
+  }
+
+  .backButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    margin-right: 15px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+}

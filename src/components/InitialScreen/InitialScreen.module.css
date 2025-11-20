@@ -1,0 +1,49 @@
+/* components/InitialScreen/InitialScreen.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dae5f5;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 50px;
+  height: 100%;
+}
+
+.illustration {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.text {
+  font-size: 1rem;
+  color: black;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.encryption {
+  position: absolute;
+  bottom: 20px;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.lockImage {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}

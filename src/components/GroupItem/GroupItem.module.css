@@ -1,0 +1,40 @@
+/* components/GroupItem/GroupItem.module.css */
+
+.groupItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.1s;
+}
+
+.groupItem:hover {
+  background-color: #f0f0f0;
+}
+
+.selected {
+  background-color: #d3d3d3;
+}
+
+.displayPicture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.groupName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
