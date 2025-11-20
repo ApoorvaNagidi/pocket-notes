@@ -65,8 +65,7 @@ const CreateGroupPopup = ({ onClose }) => {
       return;
     }
     if (trimmedName.length > 2) {
-      setError("Group name must be at most 2 characters.");
-      return;
+     
     }
 
     const newGroup = {
